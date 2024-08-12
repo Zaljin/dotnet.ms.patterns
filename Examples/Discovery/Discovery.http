@@ -1,0 +1,22 @@
+@Discovery_HostAddress = http://localhost:5223
+
+GET {{Discovery_HostAddress}}/Discovery?name=weather&version=1.0
+Accept: application/json
+
+###
+
+GET {{Discovery_HostAddress}}/Discovery?name=test
+Accept: application/json
+
+###
+
+PUT {{Discovery_HostAddress}}/Discovery
+Content-Type: application/json
+
+{
+  "name": "test",
+  "version": "1.0",
+  "endpoint": "http://localhost:5220"
+}
+
+###
